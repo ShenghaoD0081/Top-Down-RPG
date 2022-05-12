@@ -9,10 +9,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     private float canAttack;
     private float health;
+    public GameObject player;
+    Pathfinding.AIDestinationSetter aiDes;
 
     private void Start()
     {
         health = maxHealth;
+
     }
     public void takeDamage(float damage)
     {
